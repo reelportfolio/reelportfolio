@@ -113,7 +113,8 @@ h1 em{font-style:italic}.hero p{position:relative;color:var(--muted);font-size:1
 .btn{padding:14px 21px;border:1px solid var(--ink);border-radius:4px;font-size:.77rem;font-weight:700}.btn.fill{background:var(--ink);color:var(--white)}.btn.light{border-color:var(--line)}
 .micro{position:relative;margin-top:22px;color:var(--muted);font-size:.66rem}
 .marquee{background:var(--dark);color:var(--white);overflow:hidden;border-top:1px solid var(--dark);border-bottom:1px solid var(--dark)}
-.marquee-in{display:flex;width:max-content;gap:34px;padding:14px 0;font-family:var(--mono);font-size:.59rem;text-transform:uppercase;letter-spacing:.12em;animation:scroll 28s linear infinite}
+.marquee-in{display:flex;width:max-content;padding:14px 0;font-family:var(--mono);font-size:.59rem;text-transform:uppercase;letter-spacing:.12em;animation:scroll 28s linear infinite;will-change:transform}
+.marquee-copy{display:block;flex:none;padding-right:34px;white-space:nowrap}
 @keyframes scroll{to{transform:translateX(-50%)}}
 .section{padding:105px 0;border-bottom:1px solid var(--line)}.eyebrow{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent)}
 .section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;margin-bottom:55px}.section h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,5vw,4.6rem);line-height:.98;letter-spacing:-.02em;margin:10px 0}
@@ -142,6 +143,27 @@ footer{padding:28px 0;display:flex;justify-content:space-between;gap:15px;color:
  .section{padding:75px 0}.section-head,.demo-grid,.usecases{grid-template-columns:1fr;gap:25px}
  .problem-grid,.flow{grid-template-columns:1fr}.features{grid-template-columns:1fr}.use.big{grid-row:auto;min-height:300px}
  .compare{overflow-x:auto}.compare-row{min-width:680px}.phone{transform:none}.demo-grid{display:flex;flex-direction:column}.demo-copy{order:0}
+
+ /* Mobile demo: make the portfolio preview compact and better balanced */
+ .demo{padding:72px 0 82px}
+ .demo-grid{gap:38px}
+ .demo-copy p{font-size:.88rem;line-height:1.6}
+ .demo-copy .hero-actions{margin-top:25px}
+ .phone-wrap{width:100%;overflow:visible}
+ .phone{width:min(300px,82vw);padding:10px;border-radius:22px}
+ .phone-screen{padding:19px 16px 18px;min-height:0;border-radius:14px}
+ .p-photo{height:165px;border-radius:10px}
+ .p-photo:after{bottom:11px;left:11px;font-size:.48rem}
+ .p-id{padding:14px 1px 7px}
+ .p-id h3{font-size:1.75rem}
+ .p-id span{font-size:.52rem}
+ .p-tags{gap:4px;margin-top:8px;flex-wrap:wrap}
+ .p-tags i{padding:4px 7px;font-size:.51rem}
+ .p-stats{margin-top:12px;padding:9px 0}
+ .p-stats b{font-size:1.08rem}
+ .p-stats span{font-size:.42rem}
+ .p-blocks{gap:6px;margin-top:11px}
+ .p-block{height:68px;border-radius:7px}
 }
 </style>
 </head>
@@ -165,7 +187,7 @@ footer{padding:28px 0;display:flex;justify-content:space-between;gap:15px;color:
 </header>
 
 <div class="marquee"><div class="marquee-in">
- CREATOR PORTFOLIO · BRAND COLLABORATIONS · SOCIAL PROOF · CONTENT · AUDIENCE · CASE STUDIES · CREATOR PORTFOLIO · BRAND COLLABORATIONS · SOCIAL PROOF · CONTENT · AUDIENCE · CASE STUDIES ·
+ <span class="marquee-copy">CREATOR PORTFOLIO · BRAND COLLABORATIONS · SOCIAL PROOF · CONTENT · AUDIENCE · CASE STUDIES ·</span><span class="marquee-copy" aria-hidden="true">CREATOR PORTFOLIO · BRAND COLLABORATIONS · SOCIAL PROOF · CONTENT · AUDIENCE · CASE STUDIES ·</span>
 </div></div>
 
 <section class="section" id="why">
